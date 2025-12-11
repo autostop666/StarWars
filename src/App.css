@@ -4,3 +4,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+.conteiner{
+  max-width: 1880px;
+}
