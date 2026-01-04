@@ -1,5 +1,5 @@
 export interface PeopleListType {
-  count: number;
+  total_records: number;
   next: string;
   previous: string;
   results: ResultPeopleArray[];

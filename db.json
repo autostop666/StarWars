@@ -1,0 +1,22 @@
+{
+  "applications": [
+    {
+      "name": "Rsas",
+      "phone": "87223188123",
+      "mail": "asdas@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "asdsa",
+      "phone": "81232134123",
+      "mail": "asd@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Danisaijd",
+      "phone": "81273812378",
+      "mail": "asdasd@gmail.com",
+      "id": 3
+    }
+  ]
+}

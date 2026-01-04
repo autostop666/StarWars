@@ -4,7 +4,7 @@ import { getPeopleList } from "../service/service";
 import styles from "./MainPage.module.less";
 import { Card, Col, Pagination, Row, Spin } from "antd/lib";
 import { Text, TextAlign, TextSize } from "../../../shared/ui/Text/Text";
-import { DEFAULT_PAGE_SIZE } from "../../../shared/const/const";
+import { DEFAULT_ELEMENT_SIZE, DEFAULT_PAGE_SIZE } from "../../../shared/const/const";
 
 const MainPage = () => {
   const [people, setPeople] = useState<PeopleListType | null>(null);
@@ -13,7 +13,7 @@ const MainPage = () => {
   console.log(loading);
   const getData = () => {
     setLoading(true);
-    getPeopleList(page)
+    getPeopleList(page, DEFAULT_ELEMENT_SIZE)
       .then((res) => setPeople(res.data))
       .finally(() => {
         setLoading(false);
@@ -57,7 +57,7 @@ const MainPage = () => {
           align="center"
           showSizeChanger={false}
           defaultCurrent={1}
-          total={people?.count}
+          total={people?.total_records}
           onChange={(page: number) => {
             setPage(page);
           }}

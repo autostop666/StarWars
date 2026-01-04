@@ -5,18 +5,24 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "server": "json-server-auth --watch db.json --port 8080",
+    "start": "concurrently \"npm run dev\" \"npm run server\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "antd-mask-input": "^2.0.7",
     "@ant-design/compatible": "^5.1.4",
     "@ant-design/icons": "^5.1.4",
     "antd": "^5.28.0",
+    "antd-mask-input": "^2.0.7",
     "axios": "^1.13.2",
+    "concurrently": "^9.2.1",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.11.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
