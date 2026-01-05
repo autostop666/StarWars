@@ -5,12 +5,13 @@ import styles from "./MainPage.module.less";
 import { Card, Col, Pagination, Row, Spin } from "antd/lib";
 import { Text, TextAlign, TextSize } from "../../../shared/ui/Text/Text";
 import { DEFAULT_ELEMENT_SIZE, DEFAULT_PAGE_SIZE } from "../../../shared/const/const";
+import { useNavigate } from "react-router-dom";
 
 const MainPage = () => {
   const [people, setPeople] = useState<PeopleListType | null>(null);
   const [page, setPage] = useState<number>(DEFAULT_PAGE_SIZE);
   const [loading, setLoading] = useState(false);
-  console.log(loading);
+  const navigate = useNavigate();
   const getData = () => {
     setLoading(true);
     getPeopleList(page, DEFAULT_ELEMENT_SIZE)
@@ -39,8 +40,8 @@ const MainPage = () => {
           ) : (
             people &&
             people.results.map((card) => (
-              <Col span={10}>
-                <Card className={styles.card}>
+              <Col span={10} key={card.url}>
+                <Card className={styles.card} onClick={()=> navigate(`/human?id=${card.uid}`)}>
                   <Text
                     text={card.name}
                     align={TextAlign.CENTER}

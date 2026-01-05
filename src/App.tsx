@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ApplicationPage } from "./pages/ApplicationPage/ui";
 import Header from "./widgets/Header/Header";
+import HumanId from "./pages/HumanId/ui/HumanId";
 // import Footer from "./widgets/Footer/Footer";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage/>} />
           <Route path="/applications" element={<ApplicationPage/>} />
+          <Route path="/human" element={<HumanId/>} />
         </Routes>
         {/* <Footer/> */}
       </BrowserRouter>
@@ -21,3 +23,4 @@ function App() {
 }
 
 export default App;
+

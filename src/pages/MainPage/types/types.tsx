@@ -7,6 +7,7 @@ export interface PeopleListType {
 
 export interface ResultPeopleArray {
   name: string;
+  uid: number;
   height: string;
   mass: string;
   hair_color: string;
